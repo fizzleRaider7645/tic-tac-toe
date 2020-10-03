@@ -1,11 +1,10 @@
 import React from "react"
+import styled from "styled-components"
 import Cell from "./Cell"
-// import { connect } from "react-redux"
-// import { placeToken } from "../actions/BoardActions"
 
 const Board = (props: number) => {
   return (
-    <div className="board">
+    <Grid className="board">
       <Cell id={1} />
       <Cell id={2} />
       <Cell id={3} />
@@ -15,8 +14,20 @@ const Board = (props: number) => {
       <Cell id={7} />
       <Cell id={8} />
       <Cell id={9} />
-    </div>
+    </Grid>
   )
 }
+
+export const Grid = styled.div`
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  background-color: #34495e;
+  color: #fff;
+  border: 6px solid #2c3e50;
+  border-radius: 10px;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+`
 
 export default Board

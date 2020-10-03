@@ -1,21 +1,24 @@
 import React, { Component } from "react"
-import "../App.css"
+import styled from "styled-components"
+// import "../App.css"
 
 interface CellProps {
   id: number
 }
 
+const CellDiv = styled.div`
+  border: 6px solid #2c3e50;
+  border-radius: 2px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
 const Cell = ({ id }: CellProps) => {
-  // let value
-  // if (this.props.value) {
-  //   value = this.props.value
-  // }
-  return (
-    //   <div onClick={this.props.placeToken} className="cell" id={this.props.id}>
-    //     {value}
-    //   </div>
-    <div>1</div>
-  )
+  return <CellDiv>1</CellDiv>
 }
 
 export default Cell
