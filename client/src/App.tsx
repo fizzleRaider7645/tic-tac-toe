@@ -1,17 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from "react"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import "./App.css"
+import Home from "./Components/Home"
+import Board from "./Components/Board"
 
 const App = () => {
-  const [games, setGames] = useState([])
-
-  useEffect(() => {
-    // axios.get()
-  })
-
   return (
     <div className="App">
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/saved-games" component={Home}></Route>
+          <Route exact path="/board" component={Board}></Route>
+        </Switch>
+      </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
