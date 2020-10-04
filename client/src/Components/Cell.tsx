@@ -1,12 +1,15 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
-// import "../App.css"
 
 interface CellProps {
   id: number
 }
 
-const CellDiv = styled.div`
+const Cell = ({ id }: CellProps) => {
+  return <Space>1</Space>
+}
+
+const Space = styled.div`
   border: 6px solid #2c3e50;
   border-radius: 2px;
   font-family: Helvetica;
@@ -16,9 +19,5 @@ const CellDiv = styled.div`
   justify-content: center;
   align-items: center;
 `
-
-const Cell = ({ id }: CellProps) => {
-  return <CellDiv>1</CellDiv>
-}
 
 export default Cell
